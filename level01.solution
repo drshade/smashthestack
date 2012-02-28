@@ -1,0 +1,22 @@
+Simple just vi level01 and find the plaintext password, even use 'strings'
+
+level1@io:/levels$ strings level01
+/lib/ld-linux.so.2
+__gmon_start__
+libc.so.6
+printf
+execl
+puts
+strncmp
+_IO_stdin_used
+__libc_start_main
+GLIBC_2.0
+PTRh
+0Y_]
+[^_]
+[^_]
+omgpassword
+Usage: %s <password>
+Win.
+/bin/sh
+Fail.
